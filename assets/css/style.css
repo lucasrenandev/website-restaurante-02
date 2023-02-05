@@ -525,3 +525,99 @@ section {
 .blog-box h5:hover {
     color: var(--main-color);
 }
+
+/* ==== Contact section ==== */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 2rem;
+}
+
+.contact-box h5 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-box h6 {
+    font-size: var(--p-font);
+    color: var(--other-color);
+    font-weight: 600;
+}
+
+.contact-media {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 1rem;
+}
+
+.contact-media i {
+    color: var(--main-color);
+    font-size: 25px;
+    transition: all 0.40s ease;
+}
+
+.contact-media i:hover {
+    transform: scale(1.2);
+}
+
+.contact-link li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.contact-link li {
+    transition: all 0.40s ease;
+}
+
+.contact-link li a {
+    display: block;
+    color: var(--other-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.contact-link li:hover {
+    transform: translateX(8px);
+}
+
+.contact-link li:hover a {
+    color: var(--main-color);
+}
+
+.contact-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-information li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.contact-information li {
+    font-size: 17px;
+    color: var(--other-color);
+    font-weight: 600;
+}
+
+.contact-information li i {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* ==== Footer ==== */
+footer {
+    background-color: transparent;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 15px;
+    color: var(--other-color);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
