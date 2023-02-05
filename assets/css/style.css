@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --second-color: #f54300;
+    --main-color: #7dd87d;
+    --text-color: #130849;
+    --other-color: #999fb9;
+    --h1-font: 4.8rem;
+    --h2-font: 3.2rem;
+    --p-font: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* ==== Header ==== */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%;
+    background-color: transparent;
+    transition: all 0.40s ease;
+}
+
+.logo {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+}
+
+#menu-icon {
+    font-size: 38px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    padding: 10px 28px;
+    margin: 0 2px;
+}
+
+.nav-list li a {
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: all 0.40s ease;
+}
+
+.nav-list li a.active {
+    color: var(--main-color);
+}
+
+.nav-list li a:hover {
+    color: var(--main-color);
+}
+
+.nav-list li a.cart {
+    font-size: 30px;
+}
+
+.header-button a {
+    display: inline-block;
+    background-color: var(--text-color);
+    padding: 17px 32px;
+    color: var(--bg-color);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+#header.sticky {
+    background-color: var(--bg-color);
+    box-shadow: 0 0 1px #13084982;
+    padding: 12px 5%;
+}
+
+/* ==== Main home ==== */
+.home {
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 80px 5%;
+    gap: 3rem;
+}
+
+.home-image img {
+    display: block;
+    width: 520px;
+    max-width: 100%;
+    height: auto;
+}
+
+.home-text h3 {
+    font-size: 35px;
+    color: var(--second-color);
+    font-weight: 600;
+}
+
+.home-text h1 {
+    font-size: var(--h1-font);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: capitalize;
+    margin: 20px 0 20px;
+}
+
+.home-text p {
+    font-size: var(--p-font);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: var(--other-color) ;
+    line-height: 28px;
+}
+
+.main-button {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: var(--main-color);
+    padding: 17px 32px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 700;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.40s ease;
+}
+
+.main-button:hover {
+    box-shadow: 0px 15px 22px rgb(125 216 125 / 44%);
+}
+
+/* ==== All sections ==== */
+section {
+    padding: 80px 5%;
+}
+
+/* ==== About section ==== */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-image img {
+    display: block;
+    width: 520px;
+    max-width: 100%;
+    height: auto;
+}
+
+.about-text h3 {
+    font-size: 25px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+    font-weight: 700;
+    margin: 20px 0 20px;
+    line-height: 1.1;
+    text-transform: capitalize;
+}
+
+.about-text p {
+    font-size: var(--p-font);
+    font-family: "Open Sans", sans-serif;
+    color: var(--other-color);
+    font-weight: 400;
+    line-height: 28px;
+}
+
+/* ==== Menu section ==== */
+.heading {
+    text-align: center;
+}
+
+.heading h3 {
+    font-size: 35px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.heading h2 {
+    font-size: var(--h2-font);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: capitalize;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-box {
+    padding: 15px 40px;
+    box-shadow: 0px 5px 40px rgb(19 8 73 / 13%);
+    border-radius: 20px;
+    transition: all 0.40s ease;
+}
+
+.box-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.box-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.box-text h4 {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.box-text h5 {
+    font-size: var(--p-font);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: var(--other-color);
+    line-height: 25px;
+    margin: 10px 0 10px;
+}
+
+.box-text h6 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.menu-box:hover {
+    cursor: pointer;
+    transform: scale(1.04) translateY(-5px);
+}
+
+.menu-button-container {
+    text-align: center;
+}
+
+.menu-button {
+    margin-top: 0;
+}
